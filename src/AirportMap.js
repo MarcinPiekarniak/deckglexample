@@ -50,22 +50,7 @@ export default class AirportMap extends Component {
       getLineColor: f => [0, 0, 0],
     });
 
-
-    const robotLayer = new IconLayer({
-        id: 'icon-layer',
-        data: [{position: [ 18.471562507878815, 54.380394488786585 ], icon: 'marker'}],
-        iconAtlas: imageJPG,
-        iconMapping:  {
-          marker: {x: 0, y: 0, width: 259, height: 194, mask: false}
-        },
-        sizeScale: 1,
-        getSize: 400,
-        opacity: 1,
-        fp64: true
-    });
-
     allLayers.push(geoLayer);
-    allLayers.push(robotLayer);
 
     return (<div>
         <DeckGL
